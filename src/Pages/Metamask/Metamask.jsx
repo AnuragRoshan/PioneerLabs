@@ -35,7 +35,7 @@ const Metamask = () => {
   return (
     <div className="metamask-top">
       <div className="metamask-inner-top">
-        <div>
+        <div className="metamask-head">
           <h1>MetaMask Integration</h1>
         </div>
         <div className="meta-image">

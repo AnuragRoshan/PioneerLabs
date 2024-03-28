@@ -16,7 +16,14 @@ function Navbar() {
 
   return (
     <header>
-      <h3>LOGO</h3>
+      <div style={{ width: "9rem" }}>
+        <img
+          src="https://pioneerlabs.org/assets/img/logo.png"
+          alt=""
+          srcset=""
+          style={{ width: "100%" }}
+        />
+      </div>
       <nav ref={navRef} className="nav-inner">
         <div>
           <Link

@@ -53,7 +53,7 @@ header {
   justify-content: space-between;
   height: 3.5rem;
   padding: 0 2rem;
-  background-color: var(--mainColor);
+  background-color: #f1f1f1;
   color: var(--textColor);
   font-weight: bold;
 }
@@ -65,13 +65,14 @@ header {
 }
 
 nav a {
+  font-size: 0.9rem;
   margin: 0 1rem;
-  color: var(--textColor);
+  color: grey;
   text-decoration: none;
 }
 
 nav a:hover {
-  color: var(--secondaryColor);
+  color: #5767aa;
 }
 
 header .nav-btn {
@@ -87,7 +88,7 @@ header .nav-btn {
 }
 
 .active {
-  color: var(--secondaryColor);
+  color: #5767aa;
 }
 
 header div,
@@ -141,13 +142,24 @@ nav {
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: #e5ebf8;
+  background: linear-gradient(
+    45deg,
+    #82c7ff,
+    #a0d8ff,
+    #c8e6ff,
+    #a0d8ff,
+    #82c7ff
+  );
 }
 .meta-image {
   width: 9rem;
   padding: 1rem;
   border-radius: 2rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+.metamask-head {
+  color: white;
 }
 
 .metamask-inner-top {
@@ -158,7 +170,14 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: white;
+  background: linear-gradient(
+    45deg,
+    #c73e1d,
+    #c73e1d,
+    #e68f27,
+    #c73e1d,
+    #c73e1d
+  );
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -171,6 +190,7 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
   gap: 1rem;
 }
 
@@ -178,15 +198,96 @@ nav {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
-  background-color: var(--mainColorLight);
-  color: white;
+  background-color: #fbf854;
+  color: black;
+  font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
 }
 
 .meta-connect button:hover {
   background-color: transparent;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid white;
+  color: white;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.crypto-top {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    45deg,
+    #82c7ff,
+    #a0d8ff,
+    #c8e6ff,
+    #a0d8ff,
+    #82c7ff
+  );
+}
+
+.crypto-inner-top {
+  width: 25%;
+  height: max-content;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    45deg,
+    #4a00e0,
+    #8e2de2,
+    #ff52ff,
+    #8e2de2,
+    #4a00e0
+  );
+  color: white;
+}
+
+.card-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bitcoin-image {
+  width: 8rem;
+}
+
+.bitcoin-image img {
+  width: 100%;
+}
+
+.bitcoin-symbol {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fbf854;
+}
+
+.bitcoin-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: 242424;
+}
+.card-inner-top {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.coin-sym {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.coin-rate {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fbf854;
 }
