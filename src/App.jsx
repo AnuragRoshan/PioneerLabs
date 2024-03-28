@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Charts from "./Pages/Graph/Chart";
+import Nav from "./Components/nav";
+import Crypto from "./Pages/Crypto/Crypto";
+import About from "./Pages/About/About";
+import Metamask from "./Pages/Metamask/Metamask";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/chart" element={<Charts />} />
+          <Route path="/crypto" element={<Crypto />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/metaConn" element={<Metamask />} />
+        </Routes>
+      </Router>
+    </div>
+  );
+};
 
-export default App
+export default App;
