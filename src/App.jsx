@@ -8,11 +8,11 @@ import Metamask from "./Pages/Metamask/Metamask";
 
 const App = () => {
   return (
-    <div>
+    <div style={{ display: "flex" }}>
       <Router>
         <Nav />
         <Routes>
-          <Route path="/chart" element={<Charts />} />
+          <Route path="/" element={<Charts />} />
           <Route path="/crypto" element={<Crypto />} />
           <Route path="/about" element={<About />} />
           <Route path="/metaConn" element={<Metamask />} />

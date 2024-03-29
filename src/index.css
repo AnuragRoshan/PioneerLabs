@@ -14,6 +14,7 @@
 
 .chart-top {
   padding-block-end: 2rem;
+  width: 100%;
 }
 .chart-main {
   height: 80vh;
@@ -24,132 +25,82 @@
   border-radius: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
+
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
+  padding: 0;
   text-decoration: none;
+}
+.container {
+  display: flex;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+main {
+  width: 100%;
+  padding: 20px;
+}
+.sidebar {
+  background: rgb(193, 198, 198);
   color: black;
-  font-size: 18px;
+  height: 100vh;
+  width: 200px;
+  transition: all 0.5s;
 }
-
-:root {
-  --mainColor: #b1b3bb;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #f1f1f1;
-  --textColor: rgb(0, 0, 0);
-}
-
-header {
+.top_section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 3.5rem;
-  padding: 0 2rem;
-  background-color: #f1f1f1;
-  color: var(--textColor);
-  font-weight: bold;
+  padding: 20px 15px;
 }
-
-.nav-inner {
+.logo {
+  font-size: 30px;
+}
+.bars {
   display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+.link {
+  display: flex;
+  color: black;
   justify-content: center;
   align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
 }
-
-nav a {
-  font-size: 0.9rem;
-  margin: 0 1rem;
-  color: grey;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #5767aa;
-}
-
-header .nav-btn {
-  padding: 5px;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--textColor);
-  visibility: hidden;
-  opacity: 0;
-  font-size: 1.8rem;
+.link:hover {
+  background: rgb(232, 234, 235);
+  color: #000;
+  transition: all 0.5s;
 }
 
 .active {
-  color: #5767aa;
+  background: rgb(232, 234, 235);
+  color: #000;
 }
-
-header div,
-nav {
+.icon {
+  font-size: 1.5rem;
   display: flex;
-  align-items: center;
 }
-
-@media only screen and (max-width: 1024px) {
-  header .nav-btn {
-    visibility: visible;
-    opacity: 1;
-  }
-  .active {
-    color: "red";
-  }
-
-  header nav {
-    position: fixed;
-    top: -100vh;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    background-color: var(--mainColor);
-    transition: 1s;
-  }
-
-  header .responsive_nav {
-    transform: translateY(100vh);
-  }
-
-  nav .nav-close-btn {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-  }
-
-  nav a {
-    font-size: 1.5rem;
-  }
+.link_text {
+  font-size: 1rem;
+  display: flex;
 }
-
 .metamask-top {
   height: 100vh;
+  width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     #82c7ff,
     #a0d8ff,
     #c8e6ff,
     #a0d8ff,
     #82c7ff
-  );
+  ); */
 }
 .meta-image {
   width: 9rem;
@@ -214,18 +165,19 @@ nav {
 
 .crypto-top {
   height: 100vh;
+  width: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(
+  /* background: linear-gradient(
     45deg,
     #82c7ff,
     #a0d8ff,
     #c8e6ff,
     #a0d8ff,
     #82c7ff
-  );
+  ); */
 }
 
 .crypto-inner-top {
