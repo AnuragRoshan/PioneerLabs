@@ -18,6 +18,9 @@ const Card = () => {
 
   return (
     <div className="card-top">
+      <div className="card-rank">
+        # 1 <span className="rank-text"> ranked cryptocurrency</span>
+      </div>
       <div className="card-head">
         <div className="bitcoin-image">
           <img
@@ -28,9 +31,10 @@ const Card = () => {
         </div>
         <div className="bitcoin-symbol">BTC</div>
         <div className="bitcoin-name">Bitcoin</div>
+        <hr style={{ marginBlockStart: "1rem" }} />
       </div>
-      <div className="price-currency">
-        {data ? (
+      {data ? (
+        <div className="price-currency">
           <>
             {Object.keys(data).map((key) => {
               return (
@@ -41,10 +45,10 @@ const Card = () => {
               );
             })}
           </>
-        ) : (
-          <>Loading . . .</>
-        )}
-      </div>
+        </div>
+      ) : (
+        <>Loading . . .</>
+      )}
     </div>
   );
 };

@@ -42,9 +42,21 @@ main {
 .sidebar {
   background: rgb(193, 198, 198);
   color: black;
-  height: 100vh;
+  height: 100%;
   width: 200px;
   transition: all 0.5s;
+}
+.card-rank {
+  font-size: larger;
+  font-weight: bold;
+}
+.rank-text {
+  font-size: 0.8rem;
+}
+
+hr {
+  border: 1px solid white;
+  width: 100%;
 }
 .top_section {
   display: flex;
